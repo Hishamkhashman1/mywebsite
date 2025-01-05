@@ -78,7 +78,6 @@ footer {
     text-align: center;
 }
 
-
 .parallax-content {
     background-color: rgba(0, 57, 166, 1) !important; /* Change to blue with !important */
     padding: 20px;
@@ -399,6 +398,20 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
     .parallax-content h1 {
         font-size: 2em;
     }
@@ -423,5 +436,58 @@ footer {
     .team-member {
         width: 100%;
     }
-    
+}
+
+@media (max-width: 480px) {
+    header img {
+        height: 40px;
+    }
+
+    .parallax-content h1 {
+        font-size: 1.5em;
+    }
+
+    .parallax-content p {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .expertise-list li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-section h2 {
+        font-size: 1.5em;
+    }
+
+    .about-section p {
+        font-size: 0.9em;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+
+    .services-section h2 {
+        font-size: 1.5em;
+    }
+
+    .services-section p {
+        font-size: 0.9em;
+    }
+
+    .services-list h3,
+    .models-list h3 {
+        font-size: 1.2em;
+    }
+
+    .services-list p,
+    .models-list p {
+        font-size: 0.9em;
+    }
 }
