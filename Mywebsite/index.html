@@ -1,0 +1,50 @@
+{% extends 'forecasting/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="stock-ticker">
+    <div class="ticker-wrap">
+        <div class="ticker-move" id="ticker-move">
+            <!-- Ticker items will be dynamically added here -->
+        </div>
+    </div>
+</div>
+
+<div class="parallax-section" style="background-image: url('{% static "forecasting/images/hero-bg.jpeg" %}');">
+    <div class="parallax-content">
+        <h1><span class="welcome-text">Welcome to Forecast Alpha</span></h1>
+        <p><span class="optimized-text">Made by humans. Optimized by ML.</span></p>
+        <p>Revolutionizing business decisions with the power of Machine Learning and data-driven insights.</p>
+        <p>Our Vision: Empower businesses to make smarter, data-backed decisions.</p>
+        <a href="{% url 'about' %}" class="cta-button">Get to Know Us</a>
+    </div>
+</div>
+
+<div class="scrolling-band">
+    <h2>Explore Our Expertise</h2>
+    <p>Tailored forecasts for sales, inventory, finance, and more.</p>
+    <div class="slider-container">
+        <button class="slider-button prev">‹</button>
+        <ul class="expertise-list">
+            <li>
+                <h3>LSTM</h3>
+                <p>Capturing long-term trends and dependencies.</p>
+            </li>
+            <li>
+                <h3>Prophet</h3>
+                <p>Fast and intuitive trend analysis.</p>
+            </li>
+            <li>
+                <h3>SARIMA & ARIMA</h3>
+                <p>Seasonality and trend-based accuracy.</p>
+            </li>
+            <li>
+                <h3>Custom Solutions</h3>
+                <p>Designed for your unique challenges.</p>
+            </li>
+        </ul>
+        <button class="slider-button next">›</button>
+    </div>
+    <a href="{% url 'services' %}" class="cta-button">Learn More</a>
+</div>
+{% endblock %}

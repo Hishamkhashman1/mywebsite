@@ -1,0 +1,427 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0039a6;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+main {
+    padding: 20px;
+    min-height: calc(100vh - 160px); /* Adjust based on header and footer height */
+}
+
+footer {
+    background-color: #B0C4DE;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    margin-top: 20px; /* Add margin to push footer down */
+}
+
+/* Parallax Section */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+
+.parallax-content {
+    background-color: rgba(0, 57, 166, 1) !important; /* Change to blue with !important */
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%; /* Adjust the width as needed */
+    max-width: 1200px; /* Optional: set a maximum width */
+    margin: 0 auto; /* Center the content */
+    color: #fff; /* Text color inside the box */
+    text-align: center; /* Center align text */
+}
+
+.parallax-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.parallax-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Expertise Section */
+.expertise-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.expertise-list {
+    display: flex;
+    transition: transform 0.3s ease;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.expertise-list li {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 300px; /* Set a fixed width for each item */
+    margin: 0 10px; /* Add margin between items */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.expertise-list li:hover {
+    transform: scale(1.25);
+}
+
+.expertise-list h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.expertise-list p {
+    font-size: 1em;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider-button.prev {
+    left: 0;
+}
+
+.slider-button.next {
+    right: 0;
+}
+
+/* Stock Ticker */
+.stock-ticker {
+    background-color: #001f3f; /* Dark blue background */
+    color: #fff; /* White text */
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 0;
+    font-size: 1em;
+    position: fixed;
+    top: 60px; /* Adjust based on header height */
+    width: 100%;
+    z-index: 999; /* Ensure it stays above other content */
+}
+
+.ticker-wrap {
+    display: flex;
+    animation: ticker 30s linear infinite;
+}
+
+.ticker-move {
+    display: flex;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 2rem;
+    white-space: nowrap;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #007bff;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.mission-section,
+.team-section,
+.values-section,
+.history-section {
+    margin-bottom: 40px;
+}
+
+.team-section {
+    display: flex;
+    flex-direction: column; /* Stack team members vertically */
+    align-items: center;
+}
+
+.team-member {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.team-member img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.team-member h4 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.values-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.values-section li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.services-list,
+.models-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li,
+.models-list li {
+    margin-bottom: 20px;
+}
+
+.services-list h3,
+.models-list h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.services-list p,
+.models-list p {
+    font-size: 1em;
+}
+
+/* Parallax Section */
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.parallax-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.parallax-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.parallax-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .parallax-content h1 {
+        font-size: 2em;
+    }
+
+    .parallax-content p {
+        font-size: 1em;
+    }
+
+    .expertise-list li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-section h2 {
+        font-size: 2em;
+    }
+
+    .about-section p {
+        font-size: 1em;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+    
+}
