@@ -234,10 +234,9 @@ footer {
 
 /* About Section */
 .about-section {
-    background-color: #fff;
     padding: 50px 20px;
+    background-color: #fff;
     text-align: center;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .about-section h2 {
@@ -252,15 +251,33 @@ footer {
 
 .mission-section,
 .team-section,
-.values-section,
-.history-section {
-    margin-bottom: 40px;
+.values-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.mission-section h3,
+.team-section h3,
+.values-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.mission-section p,
+.team-section p,
+.values-section p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
 .team-section {
     display: flex;
-    flex-direction: column; /* Stack team members vertically */
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .team-member {
