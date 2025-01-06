@@ -100,17 +100,17 @@ footer {
 }
 
 .cta-button {
-    background-color: #007bff;
+    background-color: #ff4500; /* Change to a more visible color */
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increase padding for larger size */
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increase font size */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #e03e00; /* Darker shade for hover effect */
     transform: scale(1.05);
 }
 
@@ -228,7 +228,8 @@ footer {
 }
 
 .cta-section p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increase font size */
+    color: #ff4500; /* Change color to make it more visible */
     margin-bottom: 20px;
 }
 
@@ -436,9 +437,10 @@ footer {
     background-color: #0039a6;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Increase padding for larger size */
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.5em; /* Increase font size */
 }
 
 .download-button:hover {
