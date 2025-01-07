@@ -653,6 +653,8 @@ footer {
 #google_translate_element {
     display: inline-block;
     vertical-align: middle;
+    transform: scale(0.8); /* Scale down the widget */
+    transform-origin: 0 0; /* Adjust the origin to the top-left corner */
 }
 
 .goog-te-gadget {
