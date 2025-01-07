@@ -30,18 +30,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let scrollAmount = 0;
 
     nextButton.addEventListener('click', function() {
-        const maxScroll = slider.scrollWidth - sliderContainer.clientWidth;
-        if (scrollAmount < maxScroll) {
-            scrollAmount += sliderContainer.clientWidth;
-            slider.style.transform = `translateX(-${scrollAmount}px)`;
-        }
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
     });
 
     prevButton.addEventListener('click', function() {
-        if (scrollAmount > 0) {
-            scrollAmount -= sliderContainer.clientWidth;
-            slider.style.transform = `translateX(-${scrollAmount}px)`;
-        }
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
     });
 
     // Stock ticker functionality
@@ -73,14 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function updateTicker() {
         tickerMove.innerHTML = ''; // Clear existing ticker items
-        for (const symbol of symbols) {
-            const tickerItem = document.createElement('div');
-            tickerItem.className = 'ticker-item';
-            tickerItem.textContent = await fetchStockData(symbol);
-            tickerMove.appendChild(tickerItem);
-        }
+        const tickerItems = await Promise.all(symbols.map(fetchStockData));
+        tickerItems.forEach(item => {
+            const span = document.createElement('span');
+            span.className = 'ticker-item';
+            span.textContent = item;
+            tickerMove.appendChild(span);
+        });
     }
 
-    updateTicker();
-    setInterval(updateTicker, 60000); // Update every 60 seconds
+    updateTicker(); // Initial call to update the ticker
+    setInterval(updateTicker, 60000); // Update the ticker every 60 seconds
 });
