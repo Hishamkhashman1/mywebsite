@@ -648,3 +648,35 @@ footer {
         font-size: 0.9em;
     }
 }
+
+/* Custom styles for Google Translate widget */
+#google_translate_element {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.goog-te-gadget {
+    font-size: 0; /* Hide the default text */
+}
+
+.goog-te-gadget .goog-te-combo {
+    font-size: 14px; /* Adjust the font size of the dropdown */
+    padding: 5px; /* Add some padding */
+    border-radius: 5px; /* Add border radius */
+    border: 1px solid #ccc; /* Add border */
+}
+
+.goog-te-gadget .goog-logo-link {
+    display: none !important; /* Hide the Google logo link */
+}
+
+.goog-te-gadget .goog-te-banner-frame {
+    display: none !important; /* Hide the banner frame */
+}
+
+.goog-te-gadget .goog-te-gadget-simple {
+    background-color: transparent !important; /* Make the background transparent */
+    border: none !important; /* Remove the border */
+    padding: 0 !important; /* Remove padding */
+    margin: 0 !important; /* Remove margin */
+}
