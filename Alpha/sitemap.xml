@@ -60,4 +60,10 @@
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
+      <url>
+      <loc>https://forecastalpha.com/research.html</loc>
+      <lastmod>2025-01-07</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
 </urlset>
