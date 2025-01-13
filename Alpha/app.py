@@ -22,14 +22,26 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload():
-    global data_frame
+    global data_frame, data_description
+    if 'file' not in request.files:
+        return redirect(url_for('index'))
+    
     file = request.files['file']
-    if file:
-        file_path = os.path.join('uploads', file.filename)
+    if file and file.filename:
+        # Create uploads directory if it doesn't exist
+        upload_dir = os.path.join('static', 'uploads')
+        os.makedirs(upload_dir, exist_ok=True)
+        
+        # Save and process file
+        file_path = os.path.join(upload_dir, file.filename)
         file.save(file_path)
         data_frame = pd.read_csv(file_path)
         data_description = data_frame.describe().to_string()
-        return render_template('result.html', data_description=data_description, columns=data_frame.columns.tolist())
+        
+        return render_template('result.html',
+                             data_description=data_description,
+                             columns=data_frame.columns.tolist())
+    
     return redirect(url_for('index'))
 
 @app.route('/analyze', methods=['POST'])
