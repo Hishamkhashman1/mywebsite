@@ -67,7 +67,14 @@
             </ul>
             <button class="slider-button next">›</button>
         </div>
-    </div>
+        </div>
+            <div class="data-upload-section">
+            <h2>Upload Your Data</h2>
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
 
     <footer>
         <p>&copy; 2025 Forecast Alpha. All rights reserved.</p>
