@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forecast Alpha provides advanced forecasting solutions to transform your data into powerful business insights.">
+    <title>Forecast Alpha - Results</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/forecastalpha.jpg" type="image/jpeg">
+</head>
+<body>
+    <header>
+        <img src="images/forecastalpha.jpg" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="free_tools.html">Free Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="research.html">Research</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="stock-ticker">
+        <div class="ticker-wrap">
+            <div class="ticker-move" id="ticker-move">
+                <!-- Ticker items will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax-section" style="background-image: url('images/hero-bg.jpeg');">
+        <div class="parallax-content">
+            <h1><span class="welcome-text">Results</span></h1>
+            <p><span class="optimized-text">Made by humans. Optimized by ML.</span></p>
+            <p>Revolutionizing business decisions with the power of Machine Learning and data-driven insights.</p>
+            <p>Our Vision: Empower businesses to make smarter, data-backed decisions.</p>
+            <a href="about.html" class="cta-button">Get to Know Us</a>
+            <a href="services.html" class="cta-button">Our Services</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h1>Data Description</h1>
+        <pre>{{ data_description }}</pre>
+        <h2>Select Features and Target</h2>
+        <form action="{{ url_for('train') }}" method="post">
+            <label for="features">Features:</label>
+            <select name="features" multiple>
+                {% for column in columns %}
+                <option value="{{ column }}">{{ column }}</option>
+                {% endfor %}
+            </select>
+            <label for="target">Target:</label>
+            <select name="target">
+                {% for column in columns %}
+                <option value="{{ column }}">{{ column }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Train Model">
+        </form>
+
+        {% if training_stats %}
+        <h2>Training Statistics</h2>
+        <ul>
+            {% for key, value in training_stats.items() %}
+            <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Predictive Formula</h2>
+        <p>{{ formula }}</p>
+        {% endif %}
+
+        <form action="{{ url_for('export_pdf') }}" method="post">
+            <input type="submit" value="Export to PDF">
+        </form>
+
+        <form action="{{ url_for('export_excel') }}" method="post">
+            <input type="submit" value="Export to Excel">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Forecast Alpha. All rights reserved.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
