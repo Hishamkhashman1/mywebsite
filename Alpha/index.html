@@ -1,229 +1,95 @@
-export default function ForecastAlphaMockup() {
-  return (
-    <div className="min-h-screen w-full bg-white text-neutral-900">
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-xl bg-gradient-to-br from-sky-400 to-indigo-500" />
-            <span className="font-semibold">Forecast Alpha</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-700">
-            <a className="hover:text-neutral-950" href="#use-cases">Use Cases</a>
-            <a className="hover:text-neutral-950" href="#how-it-works">How It Works</a>
-            <a className="hover:text-neutral-950" href="#integrations">Integrations</a>
-            <a className="hover:text-neutral-950" href="#testimonials">Customers</a>
-            <a className="hover:text-neutral-950" href="#pricing">Pricing</a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <button className="hidden sm:inline-flex rounded-xl border border-neutral-300 px-4 py-2 text-sm hover:bg-neutral-50">Sign In</button>
-            <button className="rounded-xl bg-neutral-900 px-4 py-2 text-sm text-white hover:bg-neutral-800">Get a Free Data Audit</button>
-          </div>
-        </div>
-      </header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Forecast Alpha: Human Insight, Machine Precision. Transform data into clarity, detect anomalies, and predict future trends." />
+    <title>Forecast Alpha</title>
 
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-neutral-200">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(1200px_600px_at_50%_-200px,#e0f2fe,transparent)]" />
-        <div className="mx-auto max-w-7xl px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-              Predict. Detect. <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600">Optimize.</span>
-            </h1>
-            <p className="mt-4 text-lg text-neutral-700">
-              Turn messy data into measurable outcomes. Forecast Alpha brings anomaly detection and forecasting together so you can catch revenue leaks and act—before they escalate.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <button className="rounded-xl bg-neutral-900 px-5 py-3 text-white hover:bg-neutral-800">Request Demo</button>
-              <button className="rounded-xl border border-neutral-300 px-5 py-3 hover:bg-neutral-50">See Live Examples</button>
-            </div>
-            <p className="mt-3 text-xs text-neutral-500">Future txt</p>
-          </div>
-          <div className="relative">
-            <div className="aspect-[4/3] w-full rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
-              {/* HERO MOCK CHART / ILLUSTRATION */}
-              <div className="h-full w-full rounded-xl bg-gradient-to-br from-white via-sky-50 to-indigo-50 grid place-items-center text-neutral-500">
-                <div className="text-center">
-                  <div className="mx-auto mb-3 h-32 w-56 rounded-xl border border-neutral-200" />
-                  <p className="text-sm">(Placeholder graphic: KPI chart + anomaly spikes)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-      {/* PROBLEM → SOLUTION */}
-      <section className="mx-auto max-w-7xl px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">The Problem</h2>
-            <ul className="list-disc pl-5 text-neutral-700 space-y-2">
-              <li>Revenue and cost anomalies hide in thousands of metrics.</li>
-              <li>Manual monitoring is slow; alerts are noisy and late.</li>
-              <li>Teams lack a common view to prioritize actions.</li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Our Approach</h2>
-            <ul className="list-disc pl-5 text-neutral-700 space-y-2">
-              <li>Unified anomaly detection + forecasting across data sources.</li>
-              <li>Smart, de‑duplicated alerts with business context.</li>
-              <li>Playbooks that turn signals into actions.</li>
-            </ul>
-          </div>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="brand">
+          <div class="brand-icon"></div>
+          <span>Forecast Alpha</span>
         </div>
-      </section>
+        <nav class="nav-links">
+          <a href="#use-cases">Use Cases</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#integrations">Integrations</a>
+          <a href="#testimonials">Customers</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="btn-outline">Sign In</button>
+          <button class="btn-primary">Get a Free Data Audit</button>
+        </div>
+      </div>
+    </header>
 
-      {/* USE CASES */}
-      <section id="use-cases" className="border-y border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="text-2xl font-bold">Use Cases</h2>
-          <p className="mt-2 text-neutral-700">Pick a lane—each card links to a deeper page later.</p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {title: 'Predictive Forecasting', desc: 'Sales, demand, occupancy—reliable horizons for planning.'},
-              {title: 'Anomaly Detection', desc: 'Catch drops, spikes, and drifts before they cost you.'},
-              {title: 'Custom Dashboards', desc: 'Executive‑ready views that tie metrics to actions.'}
-            ].map((c) => (
-              <div key={c.title} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-10 w-10 rounded-lg bg-neutral-900/90" />
-                <h3 className="mt-4 font-semibold">{c.title}</h3>
-                <p className="mt-2 text-sm text-neutral-700">{c.desc}</p>
-                <button className="mt-4 text-sm font-medium text-neutral-900 underline underline-offset-4">Learn more</button>
-              </div>
-            ))}
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>
+            Predict. Detect. <span class="highlight">Optimize.</span>
+          </h1>
+          <p>
+            Turn messy data into measurable outcomes. Forecast Alpha brings anomaly detection and forecasting together so you can catch revenue leaks and act before they escalate.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn-primary">Request Demo</button>
+            <button class="btn-outline">See Live Examples</button>
           </div>
         </div>
-      </section>
+        <div class="hero-image">
+          <div class="placeholder">
+            <p>(Placeholder graphic: KPI chart + anomaly spikes)</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      {/* HOW IT WORKS / FEATURE FLOW */}
-      <section id="how-it-works" className="mx-auto max-w-7xl px-4 py-16">
-        <h2 className="text-2xl font-bold">How It Works</h2>
-        <div className="mt-8 grid gap-6 md:grid-cols-5">
-          {[
-            ['Collect', 'Sheets, SQL, CSV, APIs'],
-            ['Analyze', 'Normalize & enrich'],
-            ['Detect', 'AI‑based anomaly scoring'],
-            ['Forecast', 'Short‑ & mid‑term horizons'],
-            ['Act', 'Alerts, playbooks, tickets']
-          ].map(([title, subtitle], i) => (
-            <div key={title} className="relative rounded-2xl border border-neutral-200 bg-white p-5 text-center">
-              <div className="mx-auto mb-3 h-10 w-10 rounded-full bg-gradient-to-br from-sky-400 to-indigo-500" />
-              <div className="font-medium">{i + 1}. {title}</div>
-              <div className="mt-1 text-xs text-neutral-600">{subtitle}</div>
-            </div>
-          ))}
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <div class="brand small">
+            <div class="brand-icon dark"></div>
+            <span>Forecast Alpha</span>
+          </div>
+          <p>Human Insight, Machine Precision.</p>
         </div>
-        <p className="mt-4 text-xs text-neutral-500">(Future Text)</p>
-      </section>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li>Forecasting</li>
+            <li>Anomaly Detection</li>
+            <li>Dashboards</li>
+            <li>Integrations</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get in touch</h4>
+          <p>info@forecastalpha.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
 
-      {/* INTEGRATIONS */}
-      <section id="integrations" className="border-y border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="text-2xl font-bold">Integrations</h2>
-          <p className="mt-2 text-neutral-700">Connect your favorite tools—icons are placeholders.</p>
-          <div className="mt-8 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
-            {Array.from({ length: 12 }).map((_, idx) => (
-              <div key={idx} className="h-16 rounded-xl border border-dashed border-neutral-300 bg-white grid place-items-center text-xs text-neutral-500">
-                Logo {idx + 1}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS / LOGOS */}
-      <section id="testimonials" className="mx-auto max-w-7xl px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <figure key={i} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-              <blockquote className="text-sm text-neutral-700">
-                “Future text”
-              </blockquote>
-              <figcaption className="mt-4 text-xs text-neutral-500">Person Name · Title @ Company</figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          {Array.from({ length: 6 }).map((_, idx) => (
-            <div key={idx} className="h-12 rounded-xl border border-neutral-200 bg-white grid place-items-center text-xs text-neutral-500">
-              Company {idx + 1}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* PRICING (LITE) */}
-      <section id="pricing" className="border-y border-neutral-200 bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <h2 className="text-2xl font-bold">Simple Pricing</h2>
-          <p className="mt-2 text-neutral-700">Start small. Scale when you’re ready.</p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              ['Starter', 'Free data audit + sample dashboard', 'Get a feel for the workflow.'],
-              ['Growth', 'Anomaly detection + alerts', 'Best for SMB teams.'],
-              ['Scale', 'Forecasting + integrations + SLAs', 'For data‑heavy orgs.']
-            ].map(([tier, headline, blurb]) => (
-              <div key={tier} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-                <h3 className="font-semibold">{tier}</h3>
-                <p className="mt-1 text-sm text-neutral-700">{headline}</p>
-                <p className="mt-3 text-xs text-neutral-500">{blurb}</p>
-                <button className="mt-5 w-full rounded-xl bg-neutral-900 py-2 text-sm text-white hover:bg-neutral-800">Choose {tier}</button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-      <section className="mx-auto max-w-7xl px-4 py-20">
-        <div className="rounded-3xl border border-neutral-200 bg-gradient-to-br from-neutral-50 to-white p-10 text-center shadow-sm">
-          <h3 className="text-2xl font-bold">Ready to spot issues before they hit revenue?</h3>
-          <p className="mt-2 text-neutral-700">Book a 20‑minute walkthrough. We’ll plug in a sample dataset and show real anomalies.</p>
-          <div className="mt-6 flex justify-center gap-3">
-            <button className="rounded-xl bg-neutral-900 px-5 py-3 text-white hover:bg-neutral-800">Get a Free Data Audit</button>
-            <button className="rounded-xl border border-neutral-300 px-5 py-3 hover:bg-neutral-50">See Example Alerts</button>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t border-neutral-200">
-        <div className="mx-auto max-w-7xl px-4 py-10 text-sm text-neutral-600 grid gap-6 md:grid-cols-4">
-          <div>
-            <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded-lg bg-neutral-900" />
-              <span className="font-semibold text-neutral-900">Forecast Alpha</span>
-            </div>
-            <p className="mt-2 text-xs">Future text</p>
-          </div>
-          <div>
-            <div className="font-medium text-neutral-900">Product</div>
-            <ul className="mt-2 space-y-1 text-xs">
-              <li>Forecasting</li>
-              <li>Anomaly Detection</li>
-              <li>Dashboards</li>
-              <li>Integrations</li>
-            </ul>
-          </div>
-          <div>
-            <div className="font-medium text-neutral-900">Company</div>
-            <ul className="mt-2 space-y-1 text-xs">
-              <li>About</li>
-              <li>Blog</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-          <div>
-            <div className="font-medium text-neutral-900">Get in touch</div>
-            <p className="mt-2 text-xs">info@forecastalpha.com</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
 
 
 
