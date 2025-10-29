@@ -1,95 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Forecast Alpha: Human Insight, Machine Precision. Transform data into clarity, detect anomalies, and predict future trends." />
-    <title>Forecast Alpha</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forecast Alpha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="logo-circle"></div>
+        <span>Forecast Alpha</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#use-cases">Use Cases</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#integrations">Integrations</a>
+        <a href="#testimonials">Customers</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-outline">Sign In</button>
+        <button class="btn-dark">Get a Free Data Audit</button>
+      </div>
+    </div>
+  </header>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Predict. Detect. <span>Optimize.</span></h1>
+        <p>
+          Turn messy data into measurable outcomes. Forecast Alpha brings anomaly detection and forecasting together so you can catch revenue leaks and act before they escalate.
+        </p>
+        <div class="buttons">
+          <button class="btn-dark">Request Demo</button>
+          <button class="btn-outline">See Live Examples</button>
+        </div>
+        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit</small>
+      </div>
+      <div class="hero-visual">
+        <div class="mockup">
+          <p>(Placeholder graphic: KPI chart + anomaly spikes)</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <div class="nav-container">
-        <div class="brand">
-          <div class="brand-icon"></div>
+  <!-- PROBLEM / SOLUTION -->
+  <section class="section two-col">
+    <div>
+      <h2>The Problem</h2>
+      <ul>
+        <li>Revenue and cost anomalies hide in thousands of metrics.</li>
+        <li>Manual monitoring is slow; alerts are noisy and late.</li>
+        <li>Teams lack a common view to prioritize actions.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Our Approach</h2>
+      <ul>
+        <li>Unified anomaly detection + forecasting across data sources.</li>
+        <li>Smart, de-duplicated alerts with business context.</li>
+        <li>Playbooks that turn signals into actions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section id="use-cases" class="section light-bg">
+    <div class="container">
+      <h2>Use Cases</h2>
+      <p>Pick a lane — each card links to a deeper page later.</p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Predictive Forecasting</h3>
+          <p>Sales, demand, occupancy — reliable horizons for planning.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Anomaly Detection</h3>
+          <p>Catch drops, spikes, and drifts before they cost you.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Custom Dashboards</h3>
+          <p>Executive-ready views that tie metrics to actions.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <div class="logo-circle dark"></div>
           <span>Forecast Alpha</span>
         </div>
-        <nav class="nav-links">
-          <a href="#use-cases">Use Cases</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#integrations">Integrations</a>
-          <a href="#testimonials">Customers</a>
-          <a href="#pricing">Pricing</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="btn-outline">Sign In</button>
-          <button class="btn-primary">Get a Free Data Audit</button>
-        </div>
+        <p>Human Insight, Machine Precision.</p>
       </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1>
-            Predict. Detect. <span class="highlight">Optimize.</span>
-          </h1>
-          <p>
-            Turn messy data into measurable outcomes. Forecast Alpha brings anomaly detection and forecasting together so you can catch revenue leaks and act before they escalate.
-          </p>
-          <div class="cta-buttons">
-            <button class="btn-primary">Request Demo</button>
-            <button class="btn-outline">See Live Examples</button>
-          </div>
-        </div>
-        <div class="hero-image">
-          <div class="placeholder">
-            <p>(Placeholder graphic: KPI chart + anomaly spikes)</p>
-          </div>
-        </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li>Forecasting</li>
+          <li>Anomaly Detection</li>
+          <li>Dashboards</li>
+          <li>Integrations</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <div class="brand small">
-            <div class="brand-icon dark"></div>
-            <span>Forecast Alpha</span>
-          </div>
-          <p>Human Insight, Machine Precision.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <ul>
-            <li>Forecasting</li>
-            <li>Anomaly Detection</li>
-            <li>Dashboards</li>
-            <li>Integrations</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Get in touch</h4>
-          <p>info@forecastalpha.com</p>
-        </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Contact</li>
+        </ul>
       </div>
-    </footer>
-  </body>
+      <div>
+        <h4>Get in touch</h4>
+        <p>info@forecastalpha.com</p>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
-
 
 
 
