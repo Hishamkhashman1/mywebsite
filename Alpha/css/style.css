@@ -192,6 +192,15 @@ small {
   gap: 4rem;
 }
 
+.two-col-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+
+
 .section h2 {
   font-size: 1.6rem;
   font-weight: 700;
